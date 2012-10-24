@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>{% block title %}Wikicetas{% endblock %}</title>
+        {% stylesheets '@CgWikicetasBundle/Resources/public/css/*'%}
+            <link rel="stylesheet" href="{{ asset_url }}" />
+        {% endstylesheets %}
+    </head>
+    <body>
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+                    <a class="brand" href="#">Wikicetas</a>
+                    <div class="nav-collapse collapse">
+                        <ul class="nav">
+                            <li class="active"><a href="#">Recetas</a></li>
+                            <li><a href="#about">Ingredientes</a></li>
+                            <li><a href="#contact">Menús</a></li>
+                        </ul>
+                        <ul class="nav pull-right">
+                            <li><a href="#contact">Entrar</a></li>
+                        </ul>
+                    </div><!--/.nav-collapse -->
+                </div>
+            </div>
+        </div>
+        <div class="container content">
+        {% block content %}{% endblock %}
+        </div>
+        <footer>
+            <p>&copy; Wikicetas 2012</p>
+        </footer>
+        {% javascripts '@CgWikicetasBundle/Resources/public/js/*'%}
+            <script type="text/javascript" src="{{ asset_url }}"></script>
+        {% endjavascripts %}
+    </body>
+</html>

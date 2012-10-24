@@ -1,1 +1,19 @@
-This is wikicetas!!!
+{% extends 'CgWikicetasBundle::base.html.twig' %}
+
+{% block content %}
+    <div class="hero-unit">
+        <h1>Wikicetas</h1>
+        <h3>¡Crea, comparte y actualiza tus recetas favoritas!</h3>
+        <p>En Wikicetas podrás encontrar una colección de las mejores recetas y
+            podrás subir tus propias creaciones y compartirlas con el resto de usuarios.
+            ¡Pero no sólo eso! Wikicetas es un proyecto colaborativo en el que todas las recetas
+            pueden ser actualizadas y editadas por todos los usuarios. Si encuentras una receta
+            y crees que se puede mejorar ¡Adelante! Añade trucos, explica mejor los pasos, corrije
+            las cantidades, propón variantes... De esta forma, entre todos los usuarios podremos
+            crear el mejor y más completo recetario online</p>
+        <div class="pull-right"><a class="btn btn-primary btn-large">Crea una cuenta</a></div>
+        <h4 class="pull-right participate"><span>¿Quieres participar? </span></h4>
+        <br>
+    </div>
+{% endblock %}
+
